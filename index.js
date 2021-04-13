@@ -3,7 +3,7 @@ var cors = require('cors');
 const https = require('https')
 var api = require('marvel-api');
 var bodyParser = require('body-parser')
-app.use(cors());
+app.use(cors({origin: '*'}));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 

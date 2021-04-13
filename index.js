@@ -2,6 +2,7 @@ var app = require('express')();
 var cors = require('cors');
 //const https = require('https')
 var api = require('marvel-api');
+port = process.env.PORT || 80
 var bodyParser = require('body-parser')
 app.use(cors({origin: '*'}));
 // parse application/x-www-form-urlencoded
@@ -37,6 +38,6 @@ app.post('/findbyname' , (req,res) => {
   .fail(console.error)
   .done();
 }) 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log('server started');
 })

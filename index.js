@@ -1,6 +1,5 @@
 var app = require('express')();
 var cors = require('cors');
-const https = require('https')
 var api = require('marvel-api');
 var bodyParser = require('body-parser')
 // parse application/x-www-form-urlencoded
